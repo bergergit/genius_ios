@@ -13,11 +13,12 @@
 		AC7F1F301724718C00C6C57B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC7F1F2E1724718C00C6C57B /* InfoPlist.strings */; };
 		AC7F1F321724718C00C6C57B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7F1F311724718C00C6C57B /* main.m */; };
 		AC7F1F361724718C00C6C57B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7F1F351724718C00C6C57B /* AppDelegate.m */; };
-		AC7F1F381724718C00C6C57B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7F1F371724718C00C6C57B /* Default.png */; };
-		AC7F1F3A1724718C00C6C57B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7F1F391724718C00C6C57B /* Default@2x.png */; };
 		AC7F1F421724718C00C6C57B /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7F1F411724718C00C6C57B /* GameController.m */; };
 		AC7F1F481724718D00C6C57B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7F1F461724718D00C6C57B /* MainStoryboard_iPhone.storyboard */; };
 		AC7F1F4B1724718D00C6C57B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7F1F491724718D00C6C57B /* MainStoryboard_iPad.storyboard */; };
+		AC8B6861172E2A0A004BF2B5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7F1F371724718C00C6C57B /* Default.png */; };
+		AC8B6862172E2A0A004BF2B5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7F1F391724718C00C6C57B /* Default@2x.png */; };
+		AC8B6863172E2A0A004BF2B5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7F1F3B1724718C00C6C57B /* Default-568h@2x.png */; };
 		AC922EF817270662003DF826 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC922EF717270662003DF826 /* HelpViewController.m */; };
 		AC922EFB172710E0003DF826 /* MainExecutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC922EFA172710E0003DF826 /* MainExecutionViewController.m */; };
 		AC922EFD17271F65003DF826 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC922EFC17271F65003DF826 /* logo.png */; };
@@ -43,8 +44,6 @@
 		ACFF7748172DAA010027A623 /* yellow.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACFF7744172DAA010027A623 /* yellow.caf */; };
 		ACFF774A172DB3B00027A623 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACFF7749172DB3B00027A623 /* background-music-aac.caf */; };
 		ACFF774C172DB3BA0027A623 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFF774B172DB3BA0027A623 /* AVFoundation.framework */; };
-		ACFF774E172DB5C50027A623 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFF774D172DB5C50027A623 /* Default.png */; };
-		ACFF7752172DB5D40027A623 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFF7751172DB5D40027A623 /* Default-568h@2x.png */; };
 		ACFF7754172DBC020027A623 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFF7753172DBC020027A623 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
@@ -278,9 +277,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8B6861172E2A0A004BF2B5 /* Default.png in Resources */,
+				AC8B6862172E2A0A004BF2B5 /* Default@2x.png in Resources */,
+				AC8B6863172E2A0A004BF2B5 /* Default-568h@2x.png in Resources */,
 				AC7F1F301724718C00C6C57B /* InfoPlist.strings in Resources */,
-				AC7F1F381724718C00C6C57B /* Default.png in Resources */,
-				AC7F1F3A1724718C00C6C57B /* Default@2x.png in Resources */,
 				AC7F1F481724718D00C6C57B /* MainStoryboard_iPhone.storyboard in Resources */,
 				AC7F1F4B1724718D00C6C57B /* MainStoryboard_iPad.storyboard in Resources */,
 				AC922EFD17271F65003DF826 /* logo.png in Resources */,
@@ -304,8 +304,6 @@
 				ACFF7747172DAA010027A623 /* red.caf in Resources */,
 				ACFF7748172DAA010027A623 /* yellow.caf in Resources */,
 				ACFF774A172DB3B00027A623 /* background-music-aac.caf in Resources */,
-				ACFF774E172DB5C50027A623 /* Default.png in Resources */,
-				ACFF7752172DB5D40027A623 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
