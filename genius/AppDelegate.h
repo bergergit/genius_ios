@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  genius
+//  Genius
 //
-//  Created by Fabio Berger on 29/04/13.
+//  Created by Fabio Berger on 21/04/13.
 //  Copyright (c) 2013 Berger Producoes. All rights reserved.
 //
 
