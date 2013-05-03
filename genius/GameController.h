@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVAudioPlayer.h>
+#import <AudioToolbox/AudioServices.h>
 
 // Degrees to radians
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
@@ -24,9 +25,13 @@
 @property (strong, nonatomic) NSDictionary *config;
 @property (nonatomic, retain) AVAudioPlayer *player;
 
++ (BOOL) isSoundMuted;
+
 - (IBAction)gameButtonPressed:(id)sender;
 - (IBAction)howToPlayButtonPressed:(id)sender;
 - (IBAction)highscoresButtonPressed:(id)sender;
 - (IBAction)logoButtonPresed:(id)sender;
+- (IBAction)soundButtonPressed:(id)sender;
 
+- (IBAction)musicButtonPressed:(id)sender;
 @end
