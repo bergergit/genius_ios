@@ -312,38 +312,6 @@
         <image name="sound_off.png" width="15" height="16"/>
         <image name="sound_on.png" width="15" height="16"/>
     </resources>
-    <classes>
-        <class className="GameController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameController.h"/>
-            <relationships>
-                <relationship kind="action" name="gameButtonPressed:"/>
-                <relationship kind="action" name="highscoresButtonPressed:"/>
-                <relationship kind="action" name="howToPlayButtonPressed:"/>
-                <relationship kind="action" name="logoButtonPresed:"/>
-                <relationship kind="action" name="musicButtonPressed:"/>
-                <relationship kind="action" name="soundButtonPressed:"/>
-            </relationships>
-        </class>
-        <class className="HelpViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelpViewController.h"/>
-        </class>
-        <class className="HighscoresViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HighscoresViewController.h"/>
-        </class>
-        <class className="MainExecutionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainExecutionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="blueBtnPressed:"/>
-                <relationship kind="action" name="greenBtnPressed:"/>
-                <relationship kind="action" name="redBtnPressed:"/>
-                <relationship kind="action" name="yellowBtnPressed:"/>
-                <relationship kind="outlet" name="btnBlue" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnGreen" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnRed" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnYellow" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
