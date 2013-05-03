@@ -7,6 +7,8 @@
 //
 
 #import "MainExecutionViewController.h"
+#import "HighscoresViewController.h"
+#import "GameController.h"
 
 @interface MainExecutionViewController ()
 
@@ -57,6 +59,9 @@ static double PAUSE_SPEED = 0.4;
     NSString *blueButtonSoundPath = [[NSBundle mainBundle] pathForResource:@"blue" ofType:@"caf"];
     NSURL *blueButtonSoundURL = [NSURL fileURLWithPath:blueButtonSoundPath];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)blueButtonSoundURL, &_blueButtonSoundID);
+    
+    // load highscores to speed up Game Over message
+    [HighscoresViewController loadHighScores];
     
 }
 
@@ -170,14 +175,26 @@ static double PAUSE_SPEED = 0.4;
     
     Button computerButton = [[self.computerArray objectAtIndex:playerSequence++] intValue];
     
+    // wrong sequence baby
     if (computerButton != btn) {
-         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Over!"
-         message:[NSString stringWithFormat:@"You Lost! Max correct sequences: %i", [self.computerArray count] - 1]
-         delegate:self
-         cancelButtonTitle:@"OK"
-         otherButtonTitles:nil];
-         
-         [message show];
+        // do we have a highscore?
+        if (([self.computerArray count] - 1) > [HighscoresViewController getMinimumScore]) {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Game Over" message:[NSString stringWithFormat:@"Points: %i - New Highscore!", [self.computerArray count] - 1] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+            
+            alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+            UITextField *alertTextField = [alert textFieldAtIndex:0];
+            alertTextField.placeholder = @"Enter your name";
+            [alert show];
+            
+        } else {
+             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Game Over!"
+             message:[NSString stringWithFormat:@"You Lost! Points: %i", [self.computerArray count] - 1]
+             delegate:self
+             cancelButtonTitle:@"OK"
+             otherButtonTitles:nil];
+             
+             [message show];
+        }
         return;
     }
     
@@ -193,28 +210,38 @@ static double PAUSE_SPEED = 0.4;
 }
 
 - (IBAction)redBtnPressed:(id)sender {
-    AudioServicesPlaySystemSound(_redButtonSoundID);
+    if (![GameController isSoundMuted])
+        AudioServicesPlaySystemSound(_redButtonSoundID);
     [self checkState:red];
 }
 
 - (IBAction)greenBtnPressed:(id)sender {
-    AudioServicesPlaySystemSound(_greenButtonSoundID);
+    if (![GameController isSoundMuted])
+        AudioServicesPlaySystemSound(_greenButtonSoundID);
     [self checkState:green];
 }
 
 - (IBAction)yellowBtnPressed:(id)sender {
-    AudioServicesPlaySystemSound(_yellowButtonSoundID);
+    if (![GameController isSoundMuted])
+        AudioServicesPlaySystemSound(_yellowButtonSoundID);
     [self checkState:yellow];
 }
 
 - (IBAction)blueBtnPressed:(id)sender {
-    AudioServicesPlaySystemSound(_blueButtonSoundID);
+    if (![GameController isSoundMuted])
+        AudioServicesPlaySystemSound(_blueButtonSoundID);
     [self checkState:blue];
 }
 
-
 #pragma UIAlertViewDelegate
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        // save the Highscore
+        NSString *name = [[alertView textFieldAtIndex:0] text];
+        NSInteger points = [self.computerArray count] - 1;
+        
+        [HighscoresViewController addHighScore:points name:name];
+    }
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

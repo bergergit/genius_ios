@@ -22,6 +22,11 @@
 		AC922EF817270662003DF826 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC922EF717270662003DF826 /* HelpViewController.m */; };
 		AC922EFB172710E0003DF826 /* MainExecutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC922EFA172710E0003DF826 /* MainExecutionViewController.m */; };
 		AC922EFD17271F65003DF826 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC922EFC17271F65003DF826 /* logo.png */; };
+		ACDC470C173310E000ABAC54 /* background.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACDC470B173310E000ABAC54 /* background.caf */; };
+		ACDC471117333A0400ABAC54 /* music_off.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC470D17333A0400ABAC54 /* music_off.png */; };
+		ACDC471217333A0400ABAC54 /* music_on.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC470E17333A0400ABAC54 /* music_on.png */; };
+		ACDC471317333A0400ABAC54 /* sound_off.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC470F17333A0400ABAC54 /* sound_off.png */; };
+		ACDC471417333A0400ABAC54 /* sound_on.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC471017333A0400ABAC54 /* sound_on.png */; };
 		ACFF7724172C70450027A623 /* btnblue_doff.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFF7717172C70450027A623 /* btnblue_doff.png */; };
 		ACFF7725172C70450027A623 /* btnblue_don.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFF7718172C70450027A623 /* btnblue_don.png */; };
 		ACFF7726172C70450027A623 /* btnblue_pon.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFF7719172C70450027A623 /* btnblue_pon.png */; };
@@ -42,7 +47,6 @@
 		ACFF7746172DAA010027A623 /* green.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACFF7742172DAA010027A623 /* green.caf */; };
 		ACFF7747172DAA010027A623 /* red.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACFF7743172DAA010027A623 /* red.caf */; };
 		ACFF7748172DAA010027A623 /* yellow.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACFF7744172DAA010027A623 /* yellow.caf */; };
-		ACFF774A172DB3B00027A623 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = ACFF7749172DB3B00027A623 /* background-music-aac.caf */; };
 		ACFF774C172DB3BA0027A623 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFF774B172DB3BA0027A623 /* AVFoundation.framework */; };
 		ACFF7754172DBC020027A623 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFF7753172DBC020027A623 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +74,11 @@
 		AC922EF9172710E0003DF826 /* MainExecutionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainExecutionViewController.h; sourceTree = "<group>"; };
 		AC922EFA172710E0003DF826 /* MainExecutionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainExecutionViewController.m; sourceTree = "<group>"; };
 		AC922EFC17271F65003DF826 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		ACDC470B173310E000ABAC54 /* background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.caf; sourceTree = "<group>"; };
+		ACDC470D17333A0400ABAC54 /* music_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music_off.png; sourceTree = "<group>"; };
+		ACDC470E17333A0400ABAC54 /* music_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music_on.png; sourceTree = "<group>"; };
+		ACDC470F17333A0400ABAC54 /* sound_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_off.png; sourceTree = "<group>"; };
+		ACDC471017333A0400ABAC54 /* sound_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_on.png; sourceTree = "<group>"; };
 		ACFF7717172C70450027A623 /* btnblue_doff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnblue_doff.png; sourceTree = "<group>"; };
 		ACFF7718172C70450027A623 /* btnblue_don.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnblue_don.png; sourceTree = "<group>"; };
 		ACFF7719172C70450027A623 /* btnblue_pon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnblue_pon.png; sourceTree = "<group>"; };
@@ -83,15 +92,14 @@
 		ACFF7721172C70450027A623 /* btnyellow_don.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnyellow_don.png; sourceTree = "<group>"; };
 		ACFF7722172C70450027A623 /* btnyellow_pon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnyellow_pon.png; sourceTree = "<group>"; };
 		ACFF7723172C70450027A623 /* genius_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = genius_main.png; sourceTree = "<group>"; };
-		ACFF7731172C762C0027A623 /* HighscoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighscoresViewController.h; sourceTree = "<group>"; };
-		ACFF7732172C762C0027A623 /* HighscoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighscoresViewController.m; sourceTree = "<group>"; };
+		ACFF7731172C762C0027A623 /* HighscoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighscoresViewController.h; path = ../HighscoresViewController.h; sourceTree = "<group>"; };
+		ACFF7732172C762C0027A623 /* HighscoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighscoresViewController.m; path = ../HighscoresViewController.m; sourceTree = "<group>"; };
 		ACFF7734172C79810027A623 /* genius_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = genius_back.png; sourceTree = "<group>"; };
 		ACFF7736172DA0460027A623 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		ACFF7741172DAA010027A623 /* blue.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blue.caf; sourceTree = "<group>"; };
 		ACFF7742172DAA010027A623 /* green.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = green.caf; sourceTree = "<group>"; };
 		ACFF7743172DAA010027A623 /* red.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = red.caf; sourceTree = "<group>"; };
 		ACFF7744172DAA010027A623 /* yellow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yellow.caf; sourceTree = "<group>"; };
-		ACFF7749172DB3B00027A623 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		ACFF774B172DB3BA0027A623 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		ACFF774D172DB5C50027A623 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		ACFF774F172DB5D20027A623 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -118,14 +126,7 @@
 		AC7F1F191724718B00C6C57B = {
 			isa = PBXGroup;
 			children = (
-				ACFF7753172DBC020027A623 /* AudioToolbox.framework */,
-				ACFF7751172DB5D40027A623 /* Default-568h@2x.png */,
-				ACFF774F172DB5D20027A623 /* Default@2x.png */,
-				ACFF774D172DB5C50027A623 /* Default.png */,
-				ACFF774B172DB3BA0027A623 /* AVFoundation.framework */,
 				ACFF7736172DA0460027A623 /* config.plist */,
-				ACFF7731172C762C0027A623 /* HighscoresViewController.h */,
-				ACFF7732172C762C0027A623 /* HighscoresViewController.m */,
 				AC7F200E1725D56500C6C57B /* Resources */,
 				AC7F1F2B1724718C00C6C57B /* Genius */,
 				AC7F1F241724718B00C6C57B /* Frameworks */,
@@ -144,6 +145,8 @@
 		AC7F1F241724718B00C6C57B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACFF7753172DBC020027A623 /* AudioToolbox.framework */,
+				ACFF774B172DB3BA0027A623 /* AVFoundation.framework */,
 				AC7F1F251724718B00C6C57B /* UIKit.framework */,
 				AC7F1F271724718C00C6C57B /* Foundation.framework */,
 				AC7F1F291724718C00C6C57B /* CoreGraphics.framework */,
@@ -160,11 +163,13 @@
 				AC7F1F411724718C00C6C57B /* GameController.m */,
 				AC7F1F461724718D00C6C57B /* MainStoryboard_iPhone.storyboard */,
 				AC7F1F491724718D00C6C57B /* MainStoryboard_iPad.storyboard */,
-				AC7F1F2C1724718C00C6C57B /* Supporting Files */,
 				AC922EF617270662003DF826 /* HelpViewController.h */,
 				AC922EF717270662003DF826 /* HelpViewController.m */,
 				AC922EF9172710E0003DF826 /* MainExecutionViewController.h */,
 				AC922EFA172710E0003DF826 /* MainExecutionViewController.m */,
+				ACFF7731172C762C0027A623 /* HighscoresViewController.h */,
+				ACFF7732172C762C0027A623 /* HighscoresViewController.m */,
+				AC7F1F2C1724718C00C6C57B /* Supporting Files */,
 			);
 			path = Genius;
 			sourceTree = "<group>";
@@ -195,6 +200,13 @@
 		AC7F200F1725D56C00C6C57B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ACDC470D17333A0400ABAC54 /* music_off.png */,
+				ACDC470E17333A0400ABAC54 /* music_on.png */,
+				ACDC470F17333A0400ABAC54 /* sound_off.png */,
+				ACDC471017333A0400ABAC54 /* sound_on.png */,
+				ACFF7751172DB5D40027A623 /* Default-568h@2x.png */,
+				ACFF774F172DB5D20027A623 /* Default@2x.png */,
+				ACFF774D172DB5C50027A623 /* Default.png */,
 				ACFF7734172C79810027A623 /* genius_back.png */,
 				ACFF7717172C70450027A623 /* btnblue_doff.png */,
 				ACFF7718172C70450027A623 /* btnblue_don.png */,
@@ -217,7 +229,7 @@
 		ACFF7738172DA9130027A623 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				ACFF7749172DB3B00027A623 /* background-music-aac.caf */,
+				ACDC470B173310E000ABAC54 /* background.caf */,
 				ACFF7741172DAA010027A623 /* blue.caf */,
 				ACFF7742172DAA010027A623 /* green.caf */,
 				ACFF7743172DAA010027A623 /* red.caf */,
@@ -303,7 +315,11 @@
 				ACFF7746172DAA010027A623 /* green.caf in Resources */,
 				ACFF7747172DAA010027A623 /* red.caf in Resources */,
 				ACFF7748172DAA010027A623 /* yellow.caf in Resources */,
-				ACFF774A172DB3B00027A623 /* background-music-aac.caf in Resources */,
+				ACDC470C173310E000ABAC54 /* background.caf in Resources */,
+				ACDC471117333A0400ABAC54 /* music_off.png in Resources */,
+				ACDC471217333A0400ABAC54 /* music_on.png in Resources */,
+				ACDC471317333A0400ABAC54 /* sound_off.png in Resources */,
+				ACDC471417333A0400ABAC54 /* sound_on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

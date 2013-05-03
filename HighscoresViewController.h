@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HighscoresViewController : UIViewController
+@interface HighscoresViewController : UITableViewController {
+    //BOOL isHighscoresLoaded;
+    
+}
+
+
+//@property (strong, nonatomic) NSArray* highScores;
+//@property (strong, nonatomic) NSMutableArray *highScores;
+//@property (strong, nonatomic) NSString *rootPath;
+//@property (strong, nonatomic) NSString *plistPath;
+
++(void) loadHighScores;
++(void) addHighScore:(NSInteger)sequence name:(NSString*)name;
++(NSInteger) getMinimumScore;
 
 @end

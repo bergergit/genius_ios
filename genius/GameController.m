@@ -15,6 +15,8 @@
 
 @implementation GameController
 
+static bool isSoundMuted;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -32,13 +34,15 @@
     mainPageQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
     // Setup background music
-	NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"background-music-aac" ofType: @"caf"];
+	NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"background" ofType: @"caf"];
        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: soundFilePath];
        AVAudioPlayer *newPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: fileURL error: nil];
        self.player = newPlayer;
        [self.player prepareToPlay];
-       [self.player setNumberOfLoops:3];
-       //[self.player play];
+       [self.player setNumberOfLoops:-1];
+       [self.player play];
+    
+    isSoundMuted = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,6 +122,27 @@
 - (IBAction)logoButtonPresed:(id)sender {
     NSURL *url = [NSURL URLWithString:[self.config objectForKey:@"url"]];
     [[UIApplication sharedApplication] openURL:url];
+}
+
+- (IBAction)soundButtonPressed:(id)sender {
+    UIButton *button = (UIButton *)sender;
+    button.selected = !button.selected;
+    isSoundMuted = !isSoundMuted;
+}
+
+
+- (IBAction)musicButtonPressed:(id)sender {
+    UIButton *button = (UIButton *)sender;
+    button.selected = !button.selected;
+    if (self.player.isPlaying) {
+        [self.player pause];
+    } else {
+        [self.player play];
+    }
+}
+
++ (BOOL) isSoundMuted {
+    return isSoundMuted;
 }
 
 - (void) dealloc
